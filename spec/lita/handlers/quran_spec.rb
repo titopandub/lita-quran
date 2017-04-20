@@ -1,6 +1,14 @@
 require "spec_helper"
 
 describe Lita::Handlers::Quran, lita_handler: true do
+  before do
+    registry.config.handlers.quran.database_url = "postgres://localhost/quran"
+  end
+
+  after do
+    
+  end
+  
   it { is_expected.to route("quran 5:51").to(:query_quran) }
   it { is_expected.to route("quran 67:2").to(:query_quran) }
   it { is_expected.to route("quran 114:1").to(:query_quran) }
