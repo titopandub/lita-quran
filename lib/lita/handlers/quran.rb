@@ -16,8 +16,10 @@ module Lita
         }
         quran = @@DB[:quran_text].where(query).select(:text, :translation_id).first
         if quran
-          response.reply "#{quran[:text]}"
-          response.reply "#{quran[:translation_id]}"
+          response.reply([
+            "#{quran[:text]}",
+            "#{quran[:translation_id]}"
+          ])
         end
       end
     end
