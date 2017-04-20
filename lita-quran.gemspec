@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Lita Handler for Al-Qur'an"
   spec.summary       = "This is handler for lita bot that can answer with Al-Qur'an verse and ayat"
   spec.homepage      = "https://github.com/titopandub/lita-quran"
-  spec.license       = ""
+  spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
   spec.files         = `git ls-files`.split($/)

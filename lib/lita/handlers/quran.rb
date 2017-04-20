@@ -20,8 +20,8 @@ module Lita
           response.reply "#{quran[:translation_id]}"
         end
       end
-
-      Lita.register_handler(self)
     end
+
+    Lita.register_handler(Quran)
   end
 end
